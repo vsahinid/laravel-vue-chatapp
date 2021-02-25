@@ -12,16 +12,8 @@
             };
         },
         methods: {
-            // send(e) {
-            //     e.preventDefault();
-                
-            //     if (this.message == '') {
-            //         return;
-            //     }
-            //     this.$emit('send', this.message);
-            //     this.message = '';
-            // }
-            send() {
+            send(e) {
+                e.preventDefault();
                 
                 if (this.message == '') {
                     return;

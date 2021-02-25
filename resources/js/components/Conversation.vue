@@ -22,16 +22,15 @@
         },
         methods: {
             sendMessage(text) {
-                // if (!this.contact) {
-                //     return;
-                // }
-                // axios.post('/conversation/send', {
-                //     contact_id: this.contact.id,
-                //     text: text
-                // }).then((response) => {
-                //     this.$emit('new', response.data);
-                // })
-                console.log(text);
+                if (!this.contact) {
+                    return;
+                }
+                axios.post('/conversation/send', {
+                    contact_id: this.contact.id,
+                    text: text
+                }).then((response) => {
+                    this.$emit('new', response.data);
+                })
             }
         },
         components: {MessagesFeed, MessageComposer}

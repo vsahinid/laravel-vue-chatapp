@@ -7,8 +7,6 @@
                 <div class="card">
                     <div class="card-header">Vue + Laravel Chat App</div>
                     <div class="card-body" id="app">
-
-                        Hey
                         <chat-app :user="{{ auth()->user() }}"></chat-app>
                     </div>
                 </div>
